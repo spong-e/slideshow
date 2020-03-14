@@ -3,7 +3,7 @@
 # call this from cron once a day to refesh random slideshow once a day
 RANFILE="./random.list"
 NUMFOLDERS=1
-DISPLAYFOLDER="/home/alun/Pictures"
+DISPLAYFOLDER="/home/pi/Pictures"
 #DISPLAYFOLDERTMP="/home/alun/Picturestmp"
 SLEEPINTERVAL=3
 DEBUG=1
