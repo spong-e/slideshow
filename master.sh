@@ -3,7 +3,7 @@
 # call this from cron once a day to refesh random slideshow once a day
 RANFILE="./random.list"
 NUMFOLDERS=1
-DISPLAYFOLDER="/home/pi/Pictures"
+DISPLAYFOLDER="/home/pi/slideshow/pictures"
 #DISPLAYFOLDERTMP="/home/alun/Picturestmp"
 SLEEPINTERVAL=3
 DEBUG=1
@@ -55,6 +55,6 @@ pkill -9 -f qiv
  
 #run looping qiv slideshow on these pictures
 if [ $DEBUG -eq 1 ]; then echo Start qiv slideshow in background; fi
-cd $DISPLAYFOLDER ; nohup ~/Slideshow/qiv.sh &
+cd $DISPLAYFOLDER ; nohup ~/slideshow/qiv.sh &
  
 if [ $DEBUG -eq 1 ]; then echo "And now it is "`date`; fi
