@@ -15,7 +15,7 @@ echo "Starting master process at "`date`
  
 #listing of all Google drive files starting from the picture root
 if [ $DEBUG -eq 1 ]; then echo Listing all files from Google drive; fi
-rclone ls remote:"$STARTFOLDER" #--max-age 2m > files
+rclone ls remote:"$STARTFOLDER" > files
  
 # filter down to only jpegs, lose the docs folders
 if [ $DEBUG -eq 1 ]; then echo Picking out the JPEGs; fi
