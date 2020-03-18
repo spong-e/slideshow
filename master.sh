@@ -8,8 +8,21 @@ DISPLAYFOLDER="/home/pi/slideshow/pictures"
 SLEEPINTERVAL=3
 DEBUG=1
 STARTFOLDER="frame"
- 
+ISONLINE=false
 echo "Starting master process at "`date`
+
+
+wget -q --spider https://google.com
+
+if [ $? -eq 0 ]; then
+    echo "Online"
+    ISONLINE=true
+else
+    echo "Offline"
+fi
+
+
+if ISONLINE then
  
 #mkdir $DISPLAYFOLDERTMP
  
@@ -58,3 +71,5 @@ if [ $DEBUG -eq 1 ]; then echo Start qiv slideshow in background; fi
 cd $DISPLAYFOLDER ; nohup ~/slideshow/qiv.sh &
  
 if [ $DEBUG -eq 1 ]; then echo "And now it is "`date`; fi
+
+fi
