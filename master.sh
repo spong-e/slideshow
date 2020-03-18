@@ -54,6 +54,8 @@ cat jpegs.list|while read line; do
   rclone copy remote:"${STARTFOLDER}/$line" $DISPLAYFOLDER
   sleep $SLEEPINTERVAL
 done
+
+fi 
  
 # kill any qiv slideshow
 if [ $DEBUG -eq 1 ]; then echo Killing old qiv slideshow; fi
@@ -72,4 +74,3 @@ cd $DISPLAYFOLDER ; nohup ~/slideshow/qiv.sh &
  
 if [ $DEBUG -eq 1 ]; then echo "And now it is "`date`; fi
 
-fi
