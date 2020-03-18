@@ -16,13 +16,13 @@ wget -q --spider https://google.com
 
 if [ $? -eq 0 ]; then
     echo "Online"
-    $ISONLINE=true
+    ISONLINE=true
 else
     echo "Offline"
 fi
 
 
-if $ISONLINE then
+if [ "$ISONLINE" = true ] ; then
  
 #mkdir $DISPLAYFOLDERTMP
  
