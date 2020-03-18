@@ -11,5 +11,5 @@ if [ "$1" = "l" ]; then
 else
 # args: f fullscreen d delay s slideshow l autorotate R readonly I statusbar
 # i nostatusbar m maxspect
-  find . -regex ".+\.[jJ][pP][eE]?[gG]$" -print0|xargs -0 qiv -fRsmil -d 5
+  find . -regex ".+\.[jJ][pP][eE]?[gG]$" -print0|xargs -0 qiv -fRsmil -d 300
 fi
